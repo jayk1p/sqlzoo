@@ -1,78 +1,78 @@
-#SQL Zoo - Select From World
+-- #SQL Zoo - Select From World
 https://sqlzoo.net/wiki/SELECT_from_WORLD_Tutorial
 
-#1
+--#1
 
 SELECT name, continent, population FROM world
 
 
-#2
+--#2
 SELECT name FROM world
 WHERE population >= 200000000
 
-#3
+--#3
 SELECT name, gdp/population
 FROM world
 WHERE population >= 200000000
 
 
-#4
+--#4
 SELECT name, population
 FROM world
 WHERE continent = 'South America'
 
 
-#5
+--#5
 SELECT name, population
 FROM world
 WHERE name IN ('France', 'Germany', 'Italy')
 
 
-#6
+--#6
 SELECT name
 FROM world
 WHERE name LIKE ('United%')
 
-#7
+--#7
 SELECT name, population, area
 FROM world
 WHERE area > 3000000 OR population > 250000000
 
 
 
-#8
+--#8
 SELECT name, population, area 
 FROM world
 WHERE (area > 3000000 AND  population < 250000000) OR
       (area < 3000000 AND  population > 250000000);
 
 
-#9
+--#9
 SELECT name, ROUND(population/1000000, 2), ROUND(gdp/1000000000, 2)
 FROM world
 WHERE continent = 'South America'
 
 
 
-#10
+--#10
 SELECT name, ROUND(gdp/population, -3)
 FROM world
 WHERE gdp > 1000000000000
 
 
-#11
+--#11
 SELECT name, LEN(name), capital, LEN(capital)
 FROM world
 WHERE LEN(name) = LEN(capital)
 
 
-#12
+--#12
 SELECT name, capital 
 FROM world
 WHERE LEFT(name, 1) = LEFT(capital, 1) AND name <> capital
 
 
-#13
+--#13
 SELECT name
 FROM world
 WHERE name LIKE '%a%' AND name LIKE '%e%' AND name LIKE '%I%' AND name LIKE '%O%' AND name LIKE '%U%'
