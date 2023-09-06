@@ -1,0 +1,6 @@
+
+#6
+
+SELECT name
+FROM world
+WHERE gdp > 4308854000000
