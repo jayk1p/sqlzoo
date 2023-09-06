@@ -13,3 +13,17 @@ FROM world
 (SELECT gdp
 FROM world
 WHERE name = 'Germany')
+
+
+
+--#7
+
+SELECT continent, name, area 
+FROM world x
+  WHERE area >= ALL
+    (SELECT area 
+      FROM world y
+        WHERE y.continent=x.continent
+          AND area>0)
+
+
